@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model CandyWorld.ViewModels.HomeViewModel
+
+
+<h2>Candy On Sale</h2>
+
+<div class="row">
+
+    @foreach (var candy in Model.CandyOnSale)
+    {
+        <partial name="_candyCard" model="candy" />
+    }
+
+</div>
